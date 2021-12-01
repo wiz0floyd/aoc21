@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_289871_aoc21_depth_measurement">x_289871_aoc21_depth_measurement</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>DEP</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:20:32</sys_created_on>
+        <sys_id>bbe11b9b1b000110b1667596cc4bcb1f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DEP</sys_name>
+        <sys_package display_value="Advent of Code 2021" source="x_289871_aoc21">b5a113531b000110b1667596cc4bcbae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_update_name>sys_number_bbe11b9b1b000110b1667596cc4bcb1f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:20:32</sys_updated_on>
+    </sys_number>
+</record_update>
