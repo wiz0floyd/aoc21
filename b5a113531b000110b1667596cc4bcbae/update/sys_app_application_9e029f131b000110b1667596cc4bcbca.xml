@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="">Custom Applications</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name/>
+        <order/>
+        <roles>snc_internal</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:20:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9e029f131b000110b1667596cc4bcbca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Advent of Code 2021</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Advent of Code 2021" source="x_289871_aoc21">b5a113531b000110b1667596cc4bcbae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_update_name>sys_app_application_9e029f131b000110b1667596cc4bcbca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:20:59</sys_updated_on>
+        <title>Advent of Code 2021</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>
