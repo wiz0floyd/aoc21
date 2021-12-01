@@ -11,7 +11,7 @@
         <copied_from_name/>
         <description>Counts the number of depth measurements that are larger than the last measurement</description>
         <internal_name>depth_increase_checker</internal_name>
-        <label_cache>[{"name":"9aaaf00b-d1a2-4a2a-a8c5-b5472de706ac.__dont_treat_as_error__","label":"10➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9aaaf00b-d1a2-4a2a-a8c5-b5472de706ac.__action_status__","label":"10➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.__dont_treat_as_error__","label":"7➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.__action_status__","label":"7➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.affectedcis","label":"7➛affectedCis","reference_display":"affectedCis","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"2c9941e1-3d4c-4fce-9fde-59dc5c6e12e3"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.incidentimpact","label":"7➛incidentImpact","reference_display":"incidentImpact","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"a218dade-6dc7-452d-9428-7b5d3b597c6c"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.impactedserviceslist","label":"7➛impactedServicesList","reference_display":"impactedServicesList","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"c939322c-a3ea-4666-8bc2-962929adce04"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.variable","label":"7➛contactType","reference_display":"contactType","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"ba939eac-7398-4afe-8d4c-ff939666881f"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.incidentUrgency","label":"7➛incidentUrgency","reference_display":"incidentUrgency","type":"integer","base_type":"integer","attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"c9fa57db-5604-4256-b647-b98c328a0d86"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.impactedServicesText","label":"7➛impactedServicesText","reference_display":"impactedServicesText","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"d52ed1d1-1115-4d93-b1f2-8ac0a8e29c3a"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.ciOrNode","label":"7➛ciOrNode","reference_display":"ciOrNode","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"52b3bf4b-e018-43f2-8ddf-de7e622f7510"}},{"name":"flow_variable.count","label":"Flow Variables➛count","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c8983b18-681e-406c-be1e-d4a85040d5e4"}},{"name":"flow_variable.previous","label":"Flow Variables➛previous","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6d48eddb-64d3-4acc-a9d3-cedcb5f20337"}},{"name":"flow_variable.current","label":"Flow Variables➛current","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"00cb49f0-e72a-4081-8382-c465f1402da7"}},{"name":"a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1.item.depth","label":"3➛Depth Measurement Record➛Depth","reference":"","reference_display":"Depth","type":"integer","base_type":"integer","parent_table_name":"x_289871_aoc21_depth_measurement","column_name":"depth"},{"name":"a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1.item","label":"3➛Depth Measurement Record","reference":"x_289871_aoc21_depth_measurement","reference_display":"Depth Measurement Record","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.Count","label":"2➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.Table","label":"2➛Depth Measurement Table","reference":"x_289871_aoc21_depth_measurement","reference_display":"Depth Measurement Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.Records","label":"2➛Depth Measurement Records","reference":"x_289871_aoc21_depth_measurement","reference_display":"Depth Measurement Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.sum","label":"Flow Variables➛sum","reference":"","reference_display":"","type":"integer","base_type":"integer","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"a141452b-0aa4-426c-ad60-2750e7089078"}},{"name":"flow_variable.previous_sum","label":"Flow Variables➛previous sum","reference":"","reference_display":"","type":"integer","base_type":"integer","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"3f31d28b-e9aa-4170-9684-88af27acf6a6"}}]</label_cache>
+        <label_cache>[{"name":"flow_variable.previouser","label":"Flow Variables➛previouser","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"cd822961-4ed2-414a-b410-89fcb75ef7c7"}},{"name":"9aaaf00b-d1a2-4a2a-a8c5-b5472de706ac.__dont_treat_as_error__","label":"10➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9aaaf00b-d1a2-4a2a-a8c5-b5472de706ac.__action_status__","label":"10➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.__dont_treat_as_error__","label":"7➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.__action_status__","label":"7➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.affectedcis","label":"7➛affectedCis","reference_display":"affectedCis","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"2c9941e1-3d4c-4fce-9fde-59dc5c6e12e3"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.incidentimpact","label":"7➛incidentImpact","reference_display":"incidentImpact","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"a218dade-6dc7-452d-9428-7b5d3b597c6c"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.impactedserviceslist","label":"7➛impactedServicesList","reference_display":"impactedServicesList","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"c939322c-a3ea-4666-8bc2-962929adce04"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.variable","label":"7➛contactType","reference_display":"contactType","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"ba939eac-7398-4afe-8d4c-ff939666881f"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.incidentUrgency","label":"7➛incidentUrgency","reference_display":"incidentUrgency","type":"integer","base_type":"integer","attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"c9fa57db-5604-4256-b647-b98c328a0d86"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.impactedServicesText","label":"7➛impactedServicesText","reference_display":"impactedServicesText","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"d52ed1d1-1115-4d93-b1f2-8ac0a8e29c3a"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.ciOrNode","label":"7➛ciOrNode","reference_display":"ciOrNode","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"52b3bf4b-e018-43f2-8ddf-de7e622f7510"}},{"name":"flow_variable.count","label":"Flow Variables➛count","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c8983b18-681e-406c-be1e-d4a85040d5e4"}},{"name":"flow_variable.previous","label":"Flow Variables➛previous","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6d48eddb-64d3-4acc-a9d3-cedcb5f20337"}},{"name":"flow_variable.current","label":"Flow Variables➛current","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"00cb49f0-e72a-4081-8382-c465f1402da7"}},{"name":"a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1.item.depth","label":"3➛Depth Measurement Record➛Depth","reference":"","reference_display":"Depth","type":"integer","base_type":"integer","parent_table_name":"x_289871_aoc21_depth_measurement","column_name":"depth"},{"name":"a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1.item","label":"3➛Depth Measurement Record","reference":"x_289871_aoc21_depth_measurement","reference_display":"Depth Measurement Record","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.Count","label":"2➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.Table","label":"2➛Depth Measurement Table","reference":"x_289871_aoc21_depth_measurement","reference_display":"Depth Measurement Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.Records","label":"2➛Depth Measurement Records","reference":"x_289871_aoc21_depth_measurement","reference_display":"Depth Measurement Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.sum","label":"Flow Variables➛sum","reference":"","reference_display":"","type":"integer","base_type":"integer","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"a141452b-0aa4-426c-ad60-2750e7089078"}},{"name":"flow_variable.previous_sum","label":"Flow Variables➛previous sum","reference":"","reference_display":"","type":"integer","base_type":"integer","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"3f31d28b-e9aa-4170-9684-88af27acf6a6"}}]</label_cache>
         <latest_snapshot/>
         <master_snapshot/>
         <name>Depth increase checker</name>
@@ -30,7 +30,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3bc71f571b400110b1667596cc4bcb5f</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Depth increase checker</sys_name>
         <sys_overrides/>
         <sys_package display_value="Advent of Code 2021" source="x_289871_aoc21">b5a113531b000110b1667596cc4bcbae</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
         <sys_update_name>sys_hub_flow_3bc71f571b400110b1667596cc4bcb5f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:37</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=3bc71f571b400110b1667596cc4bcb5f"/>
@@ -53,10 +53,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 13:52:17</sys_created_on>
         <sys_id>3039135b1b400110b1667596cc4bcba4</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:36</sys_updated_on>
         <trigger_definition display_value="Run Once">0a76e504c32222002841b63b12d3aeac</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -104,10 +104,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 13:52:01</sys_created_on>
         <sys_id>cd295f1b1b400110b1667596cc4bcbf8</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:36</sys_updated_on>
         <ui_id>2b389395-bd4e-4d2a-81d8-98e8ef69b3ca</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cd295f1b1b400110b1667596cc4bcbf8"/>
@@ -169,10 +169,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 13:54:22</sys_created_on>
         <sys_id>d3a9939b1b400110b1667596cc4bcb5e</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:37</sys_updated_on>
         <ui_id>9aaaf00b-d1a2-4a2a-a8c5-b5472de706ac</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d3a9939b1b400110b1667596cc4bcb5e"/>
@@ -212,10 +212,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 13:52:02</sys_created_on>
         <sys_id>09299f1b1b400110b1667596cc4bcb07</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:36</sys_updated_on>
         <ui_id>daf0cf91-3b51-452d-8332-6f9994d4fe87</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -270,10 +270,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 13:52:02</sys_created_on>
         <sys_id>0d299f1b1b400110b1667596cc4bcb1b</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:36</sys_updated_on>
         <ui_id>bb5fd0e9-354c-464d-9ec5-bf00a785120d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -341,10 +341,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 14:47:53</sys_created_on>
         <sys_id>17e5a7d31bc00110b1667596cc4bcbff</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:36</sys_updated_on>
         <ui_id>086ba036-8223-43c9-86e3-b333a69b4910</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -401,10 +401,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 13:52:02</sys_created_on>
         <sys_id>49299f1b1b400110b1667596cc4bcb03</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:36</sys_updated_on>
         <ui_id>0600b3dd-11b2-4bfb-b239-79d69264f7db</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -511,10 +511,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 13:52:01</sys_created_on>
         <sys_id>89295f1b1b400110b1667596cc4bcbfe</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:36</sys_updated_on>
         <ui_id>a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -556,10 +556,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 13:52:02</sys_created_on>
         <sys_id>8d299f1b1b400110b1667596cc4bcb0a</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:36</sys_updated_on>
         <ui_id>d53f061d-0c12-4ee3-8f08-fd65d3a3fd93</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -587,11 +587,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 13:52:02</sys_created_on>
         <sys_id>c9299f1b1b400110b1667596cc4bcb1a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:31:47</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
-        <value>{{flow_variable.sum}}&gt;{{flow_variable.previous_sum}}</value>
+        <value>{{flow_variable.sum}}&gt;{{flow_variable.previous_sum}}^{{flow_variable.previouser}}&gt;0</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>condition_name</field>
@@ -626,10 +626,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 14:21:21</sys_created_on>
         <sys_id>a6df13d71b800110b1667596cc4bcb2e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:36</sys_updated_on>
         <ui_id>be3bd65b-ae0f-4cd2-98cb-14367d13f59f</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -643,10 +643,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 14:21:21</sys_created_on>
         <sys_id>2adf13d71b800110b1667596cc4bcb31</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
-        <value>-3</value>
+        <sys_updated_on>2021-12-01 15:36:36</sys_updated_on>
+        <value>-1</value>
         <variable display_value="count">4d295f1b1b400110b1667596cc4bcbeb</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f^id=a6df13d71b800110b1667596cc4bcb2e"/>
@@ -672,10 +672,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-01 14:47:53</sys_created_on>
         <sys_id>d3e5a7d31bc00110b1667596cc4bcbf5</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <sys_updated_on>2021-12-01 15:36:36</sys_updated_on>
         <ui_id>642bb58f-6b20-4a6d-a736-e968b9c48bc1</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
