@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Counts the number of depth measurements that are larger than the last measurement</description>
+        <internal_name>depth_increase_checker</internal_name>
+        <label_cache>[{"name":"9aaaf00b-d1a2-4a2a-a8c5-b5472de706ac.__dont_treat_as_error__","label":"10➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9aaaf00b-d1a2-4a2a-a8c5-b5472de706ac.__action_status__","label":"10➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.__dont_treat_as_error__","label":"7➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.__action_status__","label":"7➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.affectedcis","label":"7➛affectedCis","reference_display":"affectedCis","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"2c9941e1-3d4c-4fce-9fde-59dc5c6e12e3"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.incidentimpact","label":"7➛incidentImpact","reference_display":"incidentImpact","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"a218dade-6dc7-452d-9428-7b5d3b597c6c"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.impactedserviceslist","label":"7➛impactedServicesList","reference_display":"impactedServicesList","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"c939322c-a3ea-4666-8bc2-962929adce04"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.variable","label":"7➛contactType","reference_display":"contactType","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"ba939eac-7398-4afe-8d4c-ff939666881f"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.incidentUrgency","label":"7➛incidentUrgency","reference_display":"incidentUrgency","type":"integer","base_type":"integer","attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"c9fa57db-5604-4256-b647-b98c328a0d86"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.impactedServicesText","label":"7➛impactedServicesText","reference_display":"impactedServicesText","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"d52ed1d1-1115-4d93-b1f2-8ac0a8e29c3a"}},{"name":"6a757560-427f-4e1c-9ceb-fbaec4624c8a.ciOrNode","label":"7➛ciOrNode","reference_display":"ciOrNode","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"52b3bf4b-e018-43f2-8ddf-de7e622f7510"}},{"name":"flow_variable.count","label":"Flow Variables➛count","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c8983b18-681e-406c-be1e-d4a85040d5e4"}},{"name":"flow_variable.previous","label":"Flow Variables➛previous","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6d48eddb-64d3-4acc-a9d3-cedcb5f20337"}},{"name":"flow_variable.current","label":"Flow Variables➛current","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"00cb49f0-e72a-4081-8382-c465f1402da7"}},{"name":"a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1.item.depth","label":"3➛Depth Measurement Record➛Depth","reference":"","reference_display":"Depth","type":"integer","base_type":"integer","parent_table_name":"x_289871_aoc21_depth_measurement","column_name":"depth"},{"name":"a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1.item","label":"3➛Depth Measurement Record","reference":"x_289871_aoc21_depth_measurement","reference_display":"Depth Measurement Record","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.Count","label":"2➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.Table","label":"2➛Depth Measurement Table","reference":"x_289871_aoc21_depth_measurement","reference_display":"Depth Measurement Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.Records","label":"2➛Depth Measurement Records","reference":"x_289871_aoc21_depth_measurement","reference_display":"Depth Measurement Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.sum","label":"Flow Variables➛sum","reference":"","reference_display":"","type":"integer","base_type":"integer","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"a141452b-0aa4-426c-ad60-2750e7089078"}},{"name":"flow_variable.previous_sum","label":"Flow Variables➛previous sum","reference":"","reference_display":"","type":"integer","base_type":"integer","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"3f31d28b-e9aa-4170-9684-88af27acf6a6"}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Depth increase checker</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:46:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3bc71f571b400110b1667596cc4bcb5f</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Depth increase checker</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Advent of Code 2021" source="x_289871_aoc21">b5a113531b000110b1667596cc4bcbae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_update_name>sys_hub_flow_3bc71f571b400110b1667596cc4bcb5f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=3bc71f571b400110b1667596cc4bcb5f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3bc71f571b400110b1667596cc4bcb5f"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=3bc71f571b400110b1667596cc4bcb5f^sys_idNOT IN3039135b1b400110b1667596cc4bcba4"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</flow>
+        <name>Run Once</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:17</sys_created_on>
+        <sys_id>3039135b1b400110b1667596cc4bcba4</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <trigger_definition display_value="Run Once">0a76e504c32222002841b63b12d3aeac</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>run_once</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3039135b1b400110b1667596cc4bcba4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>3039135b1b400110b1667596cc4bcba4</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:17</sys_created_on>
+        <sys_id>c139135b1b400110b1667596cc4bcba5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:17</sys_updated_on>
+        <value>2021-11-30 00:00:00</value>
+        <variable display_value="Run in">92afcd94c32222002841b63b12d3aee8</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3bc71f571b400110b1667596cc4bcb5f^sys_idNOT IN7bc71f571b400110b1667596cc4bcb61"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3bc71f571b400110b1667596cc4bcb5f</id>
+        <name>Depth increase checker</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:46:12</sys_created_on>
+        <sys_id>7bc71f571b400110b1667596cc4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:46:12</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_action_instance action="delete_multiple" query="flow=3bc71f571b400110b1667596cc4bcb5f^sys_idNOT INcd295f1b1b400110b1667596cc4bcbf8,d3a9939b1b400110b1667596cc4bcb5e"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:01</sys_created_on>
+        <sys_id>cd295f1b1b400110b1667596cc4bcbf8</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <ui_id>2b389395-bd4e-4d2a-81d8-98e8ef69b3ca</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=cd295f1b1b400110b1667596cc4bcbf8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cd295f1b1b400110b1667596cc4bcbf8</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:01</sys_created_on>
+        <sys_id>05295f1b1b400110b1667596cc4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:01</sys_updated_on>
+        <value>x_289871_aoc21_depth_measurement</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cd295f1b1b400110b1667596cc4bcbf8</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:01</sys_created_on>
+        <sys_id>41295f1b1b400110b1667596cc4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:01</sys_updated_on>
+        <value>2000</value>
+        <variable display_value="Max Results">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cd295f1b1b400110b1667596cc4bcbf8</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:01</sys_created_on>
+        <sys_id>85295f1b1b400110b1667596cc4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:01</sys_updated_on>
+        <value>number</value>
+        <variable display_value="Order by">c7400a1587003300663ca1bb36cb0b55</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b^id=cd295f1b1b400110b1667596cc4bcbf8"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</flow>
+        <order>10</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:54:22</sys_created_on>
+        <sys_id>d3a9939b1b400110b1667596cc4bcb5e</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <ui_id>9aaaf00b-d1a2-4a2a-a8c5-b5472de706ac</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d3a9939b1b400110b1667596cc4bcb5e"/>
+    <sys_element_mapping action="delete_multiple" query="id=d3a9939b1b400110b1667596cc4bcb5e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>d3a9939b1b400110b1667596cc4bcb5e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:54:22</sys_created_on>
+        <sys_id>dfa9939b1b400110b1667596cc4bcb5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:54:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Total measurements with increasing depth = {{flow_variable.count}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=3bc71f571b400110b1667596cc4bcb5f^sys_idNOT IN09299f1b1b400110b1667596cc4bcb07,0d299f1b1b400110b1667596cc4bcb1b,17e5a7d31bc00110b1667596cc4bcbff,49299f1b1b400110b1667596cc4bcb03,89295f1b1b400110b1667596cc4bcbfe,8d299f1b1b400110b1667596cc4bcb0a,a6df13d71b800110b1667596cc4bcb2e,d3e5a7d31bc00110b1667596cc4bcbf5"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">cd299f1b1b400110b1667596cc4bcb06</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>current</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>09299f1b1b400110b1667596cc4bcb07</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <ui_id>daf0cf91-3b51-452d-8332-6f9994d4fe87</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=09299f1b1b400110b1667596cc4bcb07"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>09299f1b1b400110b1667596cc4bcb07</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>41299f1b1b400110b1667596cc4bcb0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+        <value/>
+        <variable display_value="current">3c295f1b1b400110b1667596cc4bcbdd</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=09299f1b1b400110b1667596cc4bcb07"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>current</field>
+        <id>09299f1b1b400110b1667596cc4bcb07</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>cd299f1b1b400110b1667596cc4bcb09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</table>
+        <value>{{a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1.item.depth}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">c1299f1b1b400110b1667596cc4bcb1b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>count</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>d53f061d-0c12-4ee3-8f08-fd65d3a3fd93</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>0d299f1b1b400110b1667596cc4bcb1b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <ui_id>bb5fd0e9-354c-464d-9ec5-bf00a785120d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0d299f1b1b400110b1667596cc4bcb1b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>0d299f1b1b400110b1667596cc4bcb1b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>9d299f1b1b400110b1667596cc4bcb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+        <value/>
+        <variable display_value="count">4d295f1b1b400110b1667596cc4bcbeb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0d299f1b1b400110b1667596cc4bcb1b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>count</field>
+        <id>0d299f1b1b400110b1667596cc4bcb1b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>1d299f1b1b400110b1667596cc4bcb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</table>
+        <value>{{fd_transform:0521c86b-308e-4db3-87b5-bfb24ba7a6c7}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0d299f1b1b400110b1667596cc4bcb1b^sys_idNOT IN4d299f1b1b400110b1667596cc4bcb1c"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>count</input_name>
+        <instance>0d299f1b1b400110b1667596cc4bcb1b</instance>
+        <referenced_table>sys_hub_flow_logic</referenced_table>
+        <script>{"count":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>4d299f1b1b400110b1667596cc4bcb1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">dbe5a7d31bc00110b1667596cc4bcbfe</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</flow>
+        <flow_variable/>
+        <flow_variables_assigned>sum</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:47:53</sys_created_on>
+        <sys_id>17e5a7d31bc00110b1667596cc4bcbff</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <ui_id>086ba036-8223-43c9-86e3-b333a69b4910</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=17e5a7d31bc00110b1667596cc4bcbff"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>17e5a7d31bc00110b1667596cc4bcbff</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:47:54</sys_created_on>
+        <sys_id>e7e5e7d31bc00110b1667596cc4bcb02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <value/>
+        <variable display_value="sum">7fbfdb971b800110b1667596cc4bcb23</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f^id=17e5a7d31bc00110b1667596cc4bcbff"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=17e5a7d31bc00110b1667596cc4bcbff^sys_idNOT IN1be5e7d31bc00110b1667596cc4bcb00"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>sum</input_name>
+        <instance>17e5a7d31bc00110b1667596cc4bcbff</instance>
+        <referenced_table>sys_hub_flow_logic</referenced_table>
+        <script>{"sum":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn 0 + fd_data.flow_var.current + fd_data.flow_var.previous + fd_data.flow_var.previouser"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:47:53</sys_created_on>
+        <sys_id>1be5e7d31bc00110b1667596cc4bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">01299f1b1b400110b1667596cc4bcb03</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>previouser,previous_sum</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>49299f1b1b400110b1667596cc4bcb03</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <ui_id>0600b3dd-11b2-4bfb-b239-79d69264f7db</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=49299f1b1b400110b1667596cc4bcb03"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>49299f1b1b400110b1667596cc4bcb03</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>49299f1b1b400110b1667596cc4bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+        <value/>
+        <variable display_value="previous">cd295f1b1b400110b1667596cc4bcbe5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>49299f1b1b400110b1667596cc4bcb03</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:21:21</sys_created_on>
+        <sys_id>6edf13d71b800110b1667596cc4bcb3f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:21:21</sys_updated_on>
+        <value/>
+        <variable display_value="previous sum">7bbfdb971b800110b1667596cc4bcb42</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>49299f1b1b400110b1667596cc4bcb03</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:21:21</sys_created_on>
+        <sys_id>aadf13d71b800110b1667596cc4bcb3f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:21:21</sys_updated_on>
+        <value/>
+        <variable display_value="previouser">f3bfdb971b800110b1667596cc4bcb1d</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=49299f1b1b400110b1667596cc4bcb03"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>previous</field>
+        <id>49299f1b1b400110b1667596cc4bcb03</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>c5299f1b1b400110b1667596cc4bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</table>
+        <value>{{flow_variable.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>previouser</field>
+        <id>49299f1b1b400110b1667596cc4bcb03</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:21:21</sys_created_on>
+        <sys_id>66df13d71b800110b1667596cc4bcb3f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:21:21</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</table>
+        <value>{{flow_variable.previous}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>previous_sum</field>
+        <id>49299f1b1b400110b1667596cc4bcb03</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:21:21</sys_created_on>
+        <sys_id>2adf13d71b800110b1667596cc4bcb3f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:21:21</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</table>
+        <value>{{flow_variable.sum}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">89295f1b1b400110b1667596cc4bcbfd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:01</sys_created_on>
+        <sys_id>89295f1b1b400110b1667596cc4bcbfe</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <ui_id>a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=89295f1b1b400110b1667596cc4bcbfe"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f^id=89295f1b1b400110b1667596cc4bcbfe"/>
+    <sys_element_mapping action="delete_multiple" query="id=89295f1b1b400110b1667596cc4bcbfe"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>89295f1b1b400110b1667596cc4bcbfe</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>49299f1b1b400110b1667596cc4bcb02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{2b389395-bd4e-4d2a-81d8-98e8ef69b3ca.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">45299f1b1b400110b1667596cc4bcb0a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>8d299f1b1b400110b1667596cc4bcb0a</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <ui_id>d53f061d-0c12-4ee3-8f08-fd65d3a3fd93</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=8d299f1b1b400110b1667596cc4bcb0a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>8d299f1b1b400110b1667596cc4bcb0a</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>4d299f1b1b400110b1667596cc4bcb1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+        <value>Check if depth increased</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f^id=8d299f1b1b400110b1667596cc4bcb0a"/>
+    <sys_element_mapping action="delete_multiple" query="id=8d299f1b1b400110b1667596cc4bcb0a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>8d299f1b1b400110b1667596cc4bcb0a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>c9299f1b1b400110b1667596cc4bcb1a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:54</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{flow_variable.sum}}&gt;{{flow_variable.previous_sum}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>8d299f1b1b400110b1667596cc4bcb0a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>09299f1b1b400110b1667596cc4bcb1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">6edf13d71b800110b1667596cc4bcb2d</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</flow>
+        <flow_variable/>
+        <flow_variables_assigned>count</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:21:21</sys_created_on>
+        <sys_id>a6df13d71b800110b1667596cc4bcb2e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <ui_id>be3bd65b-ae0f-4cd2-98cb-14367d13f59f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=a6df13d71b800110b1667596cc4bcb2e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>a6df13d71b800110b1667596cc4bcb2e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:21:21</sys_created_on>
+        <sys_id>2adf13d71b800110b1667596cc4bcb31</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <value>-3</value>
+        <variable display_value="count">4d295f1b1b400110b1667596cc4bcbeb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f^id=a6df13d71b800110b1667596cc4bcb2e"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">57e5a7d31bc00110b1667596cc4bcbf4</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>previous</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>a3a3c1d4-fddc-412f-92f3-0e1a39c22dd1</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:47:53</sys_created_on>
+        <sys_id>d3e5a7d31bc00110b1667596cc4bcbf5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <ui_id>642bb58f-6b20-4a6d-a736-e968b9c48bc1</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d3e5a7d31bc00110b1667596cc4bcbf5"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>d3e5a7d31bc00110b1667596cc4bcbf5</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:47:53</sys_created_on>
+        <sys_id>d3e5a7d31bc00110b1667596cc4bcbf8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <value/>
+        <variable display_value="previous">cd295f1b1b400110b1667596cc4bcbe5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d3e5a7d31bc00110b1667596cc4bcbf5"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>previous</field>
+        <id>d3e5a7d31bc00110b1667596cc4bcbf5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:47:53</sys_created_on>
+        <sys_id>5fe5a7d31bc00110b1667596cc4bcbf7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:47:53</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</table>
+        <value>{{flow_variable.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3bc71f571b400110b1667596cc4bcb5f^sys_idNOT IN19299f1b1b400110b1667596cc4bcb21,3edf13d71b800110b1667596cc4bcb59,51299f1b1b400110b1667596cc4bcb22,7adf13d71b800110b1667596cc4bcb59"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>3bc71f571b400110b1667596cc4bcb5f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{flow_variable.count}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>19299f1b1b400110b1667596cc4bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0521c86b-308e-4db3-87b5-bfb24ba7a6c7</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>3bc71f571b400110b1667596cc4bcb5f</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>b7a541b6-23f4-438f-8333-b56a0c92d498</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:21:21</sys_created_on>
+        <sys_id>3edf13d71b800110b1667596cc4bcb59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:21:21</sys_updated_on>
+        <transform_compositions>[{"id":"f4f1f631c34760109d2353a3a840dd9b","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="is_not_blank">34c17631c34760109d2353a3a840dd4f</transform_definition_id>
+        <ui_id>e85812b8-5e88-436e-8791-86724a6f5015</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>3bc71f571b400110b1667596cc4bcb5f</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>0521c86b-308e-4db3-87b5-bfb24ba7a6c7</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:02</sys_created_on>
+        <sys_id>51299f1b1b400110b1667596cc4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:02</sys_updated_on>
+        <transform_compositions>[{"id":"06190ffa23a220103a3339e1d7bf65f9","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"number","label":"Number","order":0,"attributes":{},"value":"1","type":"int","defaultValue":"","typeLabel":null,"mandatory":true,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="add">50980bfa23a220103a3339e1d7bf6510</transform_definition_id>
+        <ui_id>dfb8ade3-ced0-41c4-b5dd-c49f0fbb1cde</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>3bc71f571b400110b1667596cc4bcb5f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{flow_variable.previous_sum}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:21:21</sys_created_on>
+        <sys_id>7adf13d71b800110b1667596cc4bcb59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:21:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>b7a541b6-23f4-438f-8333-b56a0c92d498</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3bc71f571b400110b1667596cc4bcb5f^sys_idNOT IN3c295f1b1b400110b1667596cc4bcbdd,4d295f1b1b400110b1667596cc4bcbeb,7bbfdb971b800110b1667596cc4bcb42,7fbfdb971b800110b1667596cc4bcb23,cd295f1b1b400110b1667596cc4bcbe5,f3bfdb971b800110b1667596cc4bcb1d"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=00cb49f0-e72a-4081-8382-c465f1402da7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>current</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</model>
+        <model_id>3bc71f571b400110b1667596cc4bcb5f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:01</sys_created_on>
+        <sys_id>3c295f1b1b400110b1667596cc4bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>current</sys_name>
+        <sys_package display_value="Advent of Code 2021" source="x_289871_aoc21">b5a113531b000110b1667596cc4bcbae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_3c295f1b1b400110b1667596cc4bcbdd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=c8983b18-681e-406c-be1e-d4a85040d5e4</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>count</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>count</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</model>
+        <model_id>3bc71f571b400110b1667596cc4bcb5f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:01</sys_created_on>
+        <sys_id>4d295f1b1b400110b1667596cc4bcbeb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>count</sys_name>
+        <sys_package display_value="Advent of Code 2021" source="x_289871_aoc21">b5a113531b000110b1667596cc4bcbae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_4d295f1b1b400110b1667596cc4bcbeb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=3f31d28b-e9aa-4170-9684-88af27acf6a6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>previous_sum</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>previous sum</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</model>
+        <model_id>3bc71f571b400110b1667596cc4bcb5f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:20:53</sys_created_on>
+        <sys_id>7bbfdb971b800110b1667596cc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>previous sum</sys_name>
+        <sys_package display_value="Advent of Code 2021" source="x_289871_aoc21">b5a113531b000110b1667596cc4bcbae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_7bbfdb971b800110b1667596cc4bcb42</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:20:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=a141452b-0aa4-426c-ad60-2750e7089078</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sum</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>sum</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</model>
+        <model_id>3bc71f571b400110b1667596cc4bcb5f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:20:53</sys_created_on>
+        <sys_id>7fbfdb971b800110b1667596cc4bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sum</sys_name>
+        <sys_package display_value="Advent of Code 2021" source="x_289871_aoc21">b5a113531b000110b1667596cc4bcbae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_7fbfdb971b800110b1667596cc4bcb23</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:20:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=6d48eddb-64d3-4acc-a9d3-cedcb5f20337</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>previous</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>previous</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</model>
+        <model_id>3bc71f571b400110b1667596cc4bcb5f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 13:52:01</sys_created_on>
+        <sys_id>cd295f1b1b400110b1667596cc4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>previous</sys_name>
+        <sys_package display_value="Advent of Code 2021" source="x_289871_aoc21">b5a113531b000110b1667596cc4bcbae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_cd295f1b1b400110b1667596cc4bcbe5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 13:52:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=cd822961-4ed2-414a-b410-89fcb75ef7c7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>previouser</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>previouser</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Depth increase checker">3bc71f571b400110b1667596cc4bcb5f</model>
+        <model_id>3bc71f571b400110b1667596cc4bcb5f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_3bc71f571b400110b1667596cc4bcb5f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 14:20:53</sys_created_on>
+        <sys_id>f3bfdb971b800110b1667596cc4bcb1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>previouser</sys_name>
+        <sys_package display_value="Advent of Code 2021" source="x_289871_aoc21">b5a113531b000110b1667596cc4bcbae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Advent of Code 2021">b5a113531b000110b1667596cc4bcbae</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_f3bfdb971b800110b1667596cc4bcb1d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 14:20:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+</record_update>
