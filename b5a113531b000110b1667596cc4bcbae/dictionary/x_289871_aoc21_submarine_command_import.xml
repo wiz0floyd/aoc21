@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="submarine command import" max_length="40" name="x_289871_aoc21_submarine_command_import" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Direction" label="Direction" max_length="40" name="u_direction" type="string"/>
+    </element>
+</database>
